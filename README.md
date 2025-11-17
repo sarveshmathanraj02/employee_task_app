@@ -6,20 +6,20 @@ A full-stack web application to manage employees and tasks with secure JWT authe
 
 ## 📁 Repository Structure
 
-employee_task_app/       
-│
-├── backend/             
-│   ├── main.py
-│   ├── crud.py
-│   ├── models.py
-│   ├── schemas.py
-│   ├── database.py
-│   ├── requirements.txt   
-│   └── .env.example       
-│
-├── frontend/            
-│   ├── index.html
-│   └── script.js
+employee_task_app/     
+
+backend/             
+main.py
+crud.py
+models.py
+schemas.py
+database.py
+requirements.txt   
+.env.example       
+
+frontend/            
+index.html
+script.js
 
 ---
 
