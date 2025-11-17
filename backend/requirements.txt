@@ -1,0 +1,9 @@
+fastapi==0.111.1
+uvicorn[standard]==0.23.2
+sqlalchemy==2.0.21
+mysql-connector-python==8.1.0
+python-dotenv==1.0.0
+pydantic[email]==2.5.2
+passlib==1.7.4
+python-jose==3.3.0
+python-multipart==0.0.6
