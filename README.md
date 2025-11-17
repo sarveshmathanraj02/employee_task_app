@@ -1,8 +1,10 @@
-Employee Task App
+# Employee Task App
 
 A full-stack web application to manage employees and tasks with secure JWT authentication. Built with FastAPI, SQLAlchemy, MySQL, and Vanilla HTML/CSS/JS.
 
-📁 Repository Structure
+---
+
+## 📁 Repository Structure
 
 employee_task_app/       
 │
@@ -19,19 +21,26 @@ employee_task_app/
 │   ├── index.html
 │   └── script.js
 
-🛠 Setup Instructions
+---
 
-1. Clone the Repository
-git clone https://github.com/sarveshmathanraj02/employee_task_app.git
+## 🛠 Setup Instructions
+
+### 1. Clone the Repository
+git clone https://github.com/sarveshmathanraj02/employee_task_app.git  
 cd employee_task_app/backend
 
-2. Setup Backend
+---
+
+### 2. Setup Backend
+
 Create a virtual environment:
 python -m venv venv
 
 Activate the virtual environment:
+
 Windows:
 venv\Scripts\activate
+
 Mac/Linux:
 source venv/bin/activate
 
@@ -39,6 +48,7 @@ Install dependencies:
 pip install -r requirements.txt
 
 Set up environment variables:
+
 Copy .env.example → .env
 
 Update values for DB_USERNAME, DB_PASSWORD, DB_HOST, DB_PORT, DB_NAME, and SECRET_KEY if needed.
@@ -49,7 +59,9 @@ uvicorn main:app --reload
 Backend will run at:
 👉 http://127.0.0.1:8000
 
-3. Setup Frontend
+---
+
+### 3. Setup Frontend
    
 Navigate to frontend:
 cd ../frontend
@@ -62,50 +74,68 @@ Open the app:
 
 Frontend will now communicate correctly with backend APIs.
 
-🔌 API Endpoints
+---
 
-Auth 
-POST /signup/ → Create a new user 
-POST /login/ → Login user and get JWT token Employees (Protected) 
-GET /employees/ → Get all employees 
-POST /employees/ → Create employee 
-GET /employees/{id} → Get employee by ID 
-PUT /employees/{id} → Update employee 
-DELETE /employees/{id} → Delete employee Tasks (Protected) 
-GET /tasks/ → Get all tasks 
-POST /tasks/ → Create task 
-GET /tasks/{id} → Get task by ID 
-PUT /tasks/{id} → Update task DELETE /tasks/{id} → Delete task 
-Note: All protected routes require the JWT token in the Authorization header as Bearer <token>.
+## 🔌 API Endpoints
 
-✨ Bonus Features Implemented
+### Auth  
+POST /signup/ → Create a new user  
+POST /login/ → Login user and get JWT token  
 
-✔ JWT-based authentication
-✔ Edit/Delete for employees & tasks
-✔ Cascading deletes (when deleting employee)
-✔ Fully integrated frontend with live API calls
+### Employees (Protected)  
+GET /employees/ → Get all employees  
+POST /employees/ → Create employee  
+GET /employees/{id} → Get employee by ID  
+PUT /employees/{id} → Update employee  
+DELETE /employees/{id} → Delete employee  
 
-📸 Demo Video
+### Tasks (Protected)  
+GET /tasks/ → Get all tasks  
+POST /tasks/ → Create task  
+GET /tasks/{id} → Get task by ID  
+PUT /tasks/{id} → Update task  
+DELETE /tasks/{id} → Delete task  
 
-[Watch Demo Video](https://drive.google.com/your-video-link)
+---
 
-🧰 Tech Stack Used
+## ✨ Bonus Features Implemented
 
-Backend: FastAPI
-SQLAlchemy: MySQL
-Frontend: HTML / CSS / JavaScript
-Security & Utilities: JWT (JSON Web Tokens)
-Passlib
-python-dotenv
+✔ JWT-based authentication  
+✔ Edit/Delete for employees & tasks  
+✔ Cascading deletes (when deleting employee)  
+✔ Fully integrated frontend with live API calls  
 
-🧪 How to Contribute / Test
+---
 
-Clone the repo
-Follow setup instructions
-Run backend + frontend
-Test CRUD via UI or Postman
+## 📸 Demo Video
 
-👤 Author
+🎥 Watch Demo Video (Replace this link with your own):  
+https://drive.google.com/your-video-link
 
-Sarvesh M
-📧 sarveshmathanraj2@gmail.com
+---
+
+## 🧰 Tech Stack Used
+
+- **Backend**: FastAPI  
+- **ORM**: SQLAlchemy  
+- **Database**: MySQL  
+- **Frontend**: HTML / CSS / JavaScript  
+- **Security & Utilities**: JWT, Passlib, python-dotenv  
+
+---
+
+## 🧪 How to Contribute / Test
+
+1. Clone the repo  
+2. Follow setup instructions  
+3. Run backend + frontend  
+4. Test CRUD via UI or Postman  
+
+---
+
+## 👤 Author
+
+**Sarvesh M**  
+📧 Email: sarveshmathanraj2@gmail.com
+
+---
