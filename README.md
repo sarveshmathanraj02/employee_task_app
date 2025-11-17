@@ -54,7 +54,7 @@ Copy .env.example → .env
 Update values for DB_USERNAME, DB_PASSWORD, DB_HOST, DB_PORT, DB_NAME, and SECRET_KEY if needed.
 
 Run the backend server:
-uvicorn main:app --reload
+uvicorn backend.main:app --reload
 
 Backend will run at:
 👉 http://127.0.0.1:8000
@@ -109,8 +109,8 @@ DELETE /tasks/{id} → Delete task
 
 ## 📸 Demo Video
 
-🎥 Watch Demo Video (Replace this link with your own):  
-https://drive.google.com/your-video-link
+🎥 Watch Demo Video 
+https://drive.google.com/file/d/1aXQ1AlAow1GOleqomh839thHl7pD6pPM/view?usp=sharing
 
 ---
 
