@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Employee Task Manager</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800 p-6">
+
+  <h1 class="text-3xl font-bold text-center mb-6">Employee Task Manager</h1>
+
+  <!-- LOGIN PANEL -->
+  <div id="loginPanel" class="max-w-md mx-auto bg-white p-6 rounded shadow mb-6">
+    <h2 class="text-xl font-semibold mb-4">Login</h2>
+    <form id="loginForm" class="space-y-3">
+      <input id="loginUser" class="w-full border p-2 rounded" placeholder="Username" required>
+      <input id="loginPass" class="w-full border p-2 rounded" placeholder="Password" type="password" required>
+      <button class="w-full bg-indigo-600 hover:bg-indigo-700 text-white py-2 rounded">
+        Login
+      </button>
+    </form>
+
+    <p class="text-sm text-gray-600 mt-3">
+      Don't have an account?
+      <button id="signupToggle" class="text-blue-600 underline">Sign up</button>
+    </p>
+  </div>
+
+  <!-- SIGNUP PANEL -->
+  <div id="signupPanel" class="max-w-md mx-auto bg-white p-6 rounded shadow mb-6 hidden">
+    <h2 class="text-xl font-semibold mb-4">Sign Up</h2>
+    <form id="signupForm" class="space-y-3">
+      <input id="signupUser" class="w-full border p-2 rounded" placeholder="Choose username" required>
+      <input id="signupPass" class="w-full border p-2 rounded" placeholder="Choose password" type="password" required>
+      <button class="w-full bg-green-600 hover:bg-green-700 text-white py-2 rounded">
+        Create Account
+      </button>
+    </form>
+
+    <p class="text-sm text-gray-600 mt-3">
+      Already have an account?
+      <button id="loginToggle" class="text-blue-600 underline">Login</button>
+    </p>
+  </div>
+
+  <!-- MAIN APP UI (hidden until login) -->
+  <div id="appUI" class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 hidden">
+
+    <!-- EMPLOYEE PANEL -->
+    <section class="bg-white p-5 rounded-xl shadow">
+      <h2 class="text-xl font-semibold mb-3">Add Employee</h2>
+
+      <form id="employeeForm" class="space-y-3">
+        <input id="name" class="w-full border p-2 rounded" type="text" placeholder="Name" required>
+        <input id="email" class="w-full border p-2 rounded" type="email" placeholder="Email" required>
+        <input id="role" class="w-full border p-2 rounded" type="text" placeholder="Role">
+
+        <button class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded">
+          Add Employee
+        </button>
+      </form>
+
+      <h3 class="mt-6 text-lg font-semibold">Employees</h3>
+      <input id="searchEmployee" class="w-full border p-2 rounded my-2" placeholder="Search employee...">
+
+      <ul id="employeeList" class="space-y-2 max-h-80 overflow-y-auto"></ul>
+    </section>
+
+    <!-- TASK PANEL -->
+    <section class="bg-white p-5 rounded-xl shadow">
+      <h2 class="text-xl font-semibold mb-3">Add Task</h2>
+
+      <form id="taskForm" class="space-y-3">
+        <input id="taskTitle" class="w-full border p-2 rounded" placeholder="Title" required>
+        <input id="taskDesc" class="w-full border p-2 rounded" placeholder="Description">
+        <input id="taskDue" class="w-full border p-2 rounded" placeholder="Due Date" type="date">
+        <input id="taskEmployee" class="w-full border p-2 rounded" placeholder="Employee ID (optional)" type="number">
+
+        <select id="taskStatus" class="w-full border p-2 rounded">
+          <option value="pending">Pending</option>
+          <option value="in_progress">In Progress</option>
+          <option value="done">Done</option>
+        </select>
+
+        <button class="w-full bg-green-600 hover:bg-green-700 text-white py-2 rounded">
+          Add Task
+        </button>
+      </form>
+
+      <h3 class="mt-6 text-lg font-semibold">Tasks</h3>
+      <input id="searchTask" class="w-full border p-2 rounded my-2" placeholder="Search task...">
+
+      <ul id="taskList" class="space-y-2 max-h-80 overflow-y-auto"></ul>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
